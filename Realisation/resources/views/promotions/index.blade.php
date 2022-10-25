@@ -1,8 +1,19 @@
- <div>
-    <input type="text" id="search">
- </div>
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>Gestion des apprenants</title>
+ </head>
+ <body>
+    <h1>Liste des promotions</h1>
+
+        <div class="search">
+            <input type="text" id="search" placeholder="Chercher promotion">
+        </div>
  
- <h1>Liste des promotions</h1>
  <a href="{{route('promotions.create')}}">Create promotion</a>
 
  <table>
@@ -16,6 +27,7 @@
         @foreach($promotions as $promotion)
             <tr>
                 <td> 
+
                     <a href="{{route('promotions.show',['promotion'=>$promotion['id']])}}">
                         <li>{{ $promotion['name'] }} </li>
                     </a>
@@ -52,3 +64,6 @@
     })
 
 </script>
+ </body>
+ </html>
+ 

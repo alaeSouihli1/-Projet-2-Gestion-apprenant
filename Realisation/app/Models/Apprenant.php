@@ -10,6 +10,7 @@ use App\Models\Promotion;
 class Apprenant extends Model
 {
     use HasFactory;
+    protected $table = 'apprenants';
     protected $fillable=[
         'id',
         'prenom',

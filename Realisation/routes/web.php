@@ -23,8 +23,14 @@ Route::get('/', function () {
 
 Route::resource('promotions',PromotionController::class);
 Route::get('search',[PromotionController::class,'search']);
+Route::get('searchstudent',[ApprenantController::class,'search1']);
+
 Route::resource('apprenants',ApprenantController::class);
 Route::get('apprenants/create/{id}',[ApprenantController::class,'create'])->name('apprenants.create');
+Route::get('apprenants/edit/{id}',[ApprenantController::class,'edit'])->name('apprenants.edit');
+// Route::get('apprenants/destroy/{id}',[ApprenantController::class,'destroy']);
+
+
 
 
 
