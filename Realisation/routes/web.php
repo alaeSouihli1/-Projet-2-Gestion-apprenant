@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use  App\Http\Controllers\PromotionController;
+use  App\Http\Controllers\ApprenantController;
 use  App\Http\Controllers\SearchController;
 
 
@@ -22,6 +23,9 @@ Route::get('/', function () {
 
 Route::resource('promotions',PromotionController::class);
 Route::get('search',[PromotionController::class,'search']);
-// Route::get('/delete/{id}',[PromotionController::class,'destroy']);
+Route::resource('apprenants',ApprenantController::class);
+Route::get('apprenants/create/{id}',[ApprenantController::class,'create'])->name('apprenants.create');
+
+
 
 

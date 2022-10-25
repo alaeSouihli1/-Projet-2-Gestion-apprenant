@@ -9,5 +9,23 @@
     </form>
 </div>
 <div>
+<a href="{{route('apprenants.create',$promotion['id'])}}">ajouter apprenant</a>
     
+    <table>
+    <tr>
+            <th>name</th>
+            <th>lastname</th>
+            <th>email</th>
+
+        </tr>
+    @foreach($apprenants as $apprenant)
+       
+        <tr>
+            <td>{{$apprenant['name']}}</td>
+            <td>{{$apprenant['lastname']}}</td>
+            <td>{{$apprenant['email']}}</td>
+
+        </tr>
+    </table>
+    @endforeach
 </div>

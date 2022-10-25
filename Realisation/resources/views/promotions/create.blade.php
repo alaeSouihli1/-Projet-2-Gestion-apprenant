@@ -1,4 +1,4 @@
-<h1>Create a new promotion</h1>
+<h1>creer une promotion</h1>
 <div>
     <form action="{{route('promotions.store')}}" method="post">
         @csrf

@@ -4,11 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Promotion;
+use App\Models\Apprenant;
+
+
 class PromotionController extends Controller
 {
 
     public function index()
     {
+
         return view('promotions.index',['promotions' => Promotion::all()]);
     }
 
@@ -36,7 +40,8 @@ class PromotionController extends Controller
 
     public function edit($id)
     {
-        return view('promotions.edit',['promotion'=>Promotion::findOrFail($id) ]);
+        $apprenants=Apprenant::all()->where('promotion_id', $id);
+        return view('promotions.edit',['promotion'=>Promotion::findOrFail($id),'apprenants'=>$apprenants ]);
     }
 
 
