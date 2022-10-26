@@ -50,34 +50,7 @@ class ApprenantController extends Controller
 
     }
 
-    // public function search1(Request $request){
-    //     if($request->ajax()){
-    //         $promotion_id=$request->promotion_id;
-    //         $output="";
-    //         $apprenants=Apprenant::where('name','LIKE','%'.$request->search.'%')->where('promotion_id',$promotion_id)->get();
-          
-    //             foreach($apprenants as $apprenant){
-    //                 $output.='<tr>.
-    //                 <td>'.$apprenant->name.'</td>
-    //                 <td>'.$apprenant->lastname.'</td>
-    //                 <td>'.$apprenant->email.'</td>
 
-                 
-    //                 </tr>';
-                    
-    //                 // <a href=".">edit</a>
-    //                 // <form action="{{route('promotions.destroy',$promotion->id)}}" method="POST">
-    //                 //     @csrf
-    //                 //     @method('DELETE')
-    //                 //     <input  type="submit" value="Delete" />
-    //                 // </form>
-                
-    //             return Response($output);
-
-    //         }
-    //     }
-
-    // }
     public function search1(Request $request){
         $output="";
         $id = $request->PromotionID;
@@ -92,15 +65,34 @@ class ApprenantController extends Controller
         {
             $output.=
             '<tr>
+            <td> '.$apprenant->id.' </td>
             <td> '.$apprenant->name.' </td>
             <td> '.$apprenant->lastname.' </td>
             <td> '.$apprenant->email.' </td>
             <td> 
-            <a href="'.route('apprenants.edit',$apprenant->id).'">Edit</a>
+                <a href="'.route('apprenants.edit',$apprenant->id).'" style=" text-decoration: none;
+                font-family: 14px;
+                color: white;
+                padding:7px 20px;
+                display: block;
+                background-color: #4c74d8;
+                float:left;
+                // width:50px;
+                font-weight: 500;">
+                Modifier
+                </a>
                 <form action="'.route('apprenants.destroy',$apprenant->id).'" method="POST">
                     <input type="hidden" name="_token" value="yb5AihWDKb7pZahkmAzVDUI5s5u0fCXfajDetPDe">
                     <input type="hidden" name="_method" value="DELETE">
-                    <input  type="submit" value="Delete" />
+                    <input  type="submit" value="Supprimer" style=" background-color: #ff0000; /* Green */
+                    border: none;
+                    color: white;
+                    padding: 7px 20px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                    margin-left:20px;
+                    font-size: 16px;"/>
                 </form>
 
         </td>

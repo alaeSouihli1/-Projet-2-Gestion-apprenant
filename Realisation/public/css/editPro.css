@@ -5,7 +5,6 @@
 }
 
 
-
 #section{
     background-image: url('../images/background.jpg');
     background-size: cover;
@@ -24,8 +23,6 @@
     padding-top: 30px;
     margin: auto;
 } 
-
-
 h1{
     text-align: center;
     color: #213872;
@@ -35,23 +32,69 @@ h1{
 nav{
     width: 100%;
     margin-bottom: 20px;
+    margin-top: 50px;
+    text-align: center;
+
+}
+nav form label{
+    color: black;
+    font-weight: 500;
+
+}
+nav form input{
+    width: 400px;
+    padding: 5px 10px;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    border-radius:6px ;
+    border: 3px solid rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+}
+.btn-edit{
+    cursor: pointer;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 6px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
     margin-top: 20px;
-    /* background-color: aqua; */
-  
+}
+#search{
+    border: 3px solid rgb(255, 255, 255);
+    height: 30px;
+    width: 300px;
+    border-radius:50px ;
+    padding: 0px 10px;
+
+
   }
-    
-ul{
+
+.search{
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.search ul {
     margin: auto;
-    margin-left: 180px;
-
-
-  }
-ul li{
+    /* margin-left: 180px; */
+}
+.search ul li{
     list-style: none;
     display: inline-block;
     line-height: 35px;
-  }
-ul li a{
+}
+.search ul li input{
+    border: 3px solid rgb(255, 255, 255);
+    outline: none;
+    border: none;
+}
+.search ul li a{
     text-decoration: none;
     font-family: 14px;
     color: white;
@@ -59,22 +102,12 @@ ul li a{
     display: block;
     padding: 0 15px;
     display: block;
-    background-color: rgb(42, 199, 42);
+    background-color: #213872;
     /* border-radius: 5px; */
     font-weight: 500;
-  }
- #search{
-    border: 3px solid rgb(255, 255, 255);
-    height: 30px;
-    width: 300px;
-    border-radius:50px ;
-    padding: 0px 10px;
-    outline: none;
-    border: none;
+}
 
-  }
-
- #promotions{
+#promotions{
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
@@ -93,30 +126,34 @@ ul li a{
     text-align: center;
     background-color: #213872;
     color: white;
-  }
-
+}
 .id {
     text-align: center;
     font-weight: 500;
   }
-
-.name{
-    text-decoration: none;
-    font-family: 14px;
-    color: black;
-    font-weight: 500;
-    padding: 0 20px;
-
-}
-#btn-edit{
-  background-color: #4c74d8;
-
-}
 .ul{
     margin-left: 0px;
     text-align: center;
 }
-.delete{
+.ul li{
+    list-style: none;
+    display: inline-block;
+    line-height: 35px;
+}
+
+.ul li a{
+    text-decoration: none;
+    font-family: 14px;
+    color: white;
+    display: block;
+    padding: 0 15px;
+    display: block;
+    background-color: #4c74d8;
+    /* border-radius: 5px; */
+    font-weight: 500;
+  }
+
+  .delete{
     background-color: #ff0000; /* Green */
     border: none;
     color: white;
@@ -126,10 +163,4 @@ ul li a{
     display: inline-block;
     font-size: 16px;
 }
-.scrollbar{
-    margin: auto;
-    Overflow-y:scroll;
-    width:100%;
-    height: 460px;
 
-}

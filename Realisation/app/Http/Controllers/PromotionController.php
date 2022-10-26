@@ -69,13 +69,31 @@ class PromotionController extends Controller
             if($promotions){
                 foreach($promotions as $promotion){
                     $output.='<tr>.
+                    <td>'.$promotion->id.'</td>
                     <td>'.$promotion->name.'</td>
                     <td>
-                        <a href="'.route('promotions.edit',$promotion->id).'">Edit</a>
+                        <a href="'.route('promotions.edit',$promotion->id).'" style=" text-decoration: none;
+                        font-family: 14px;
+                        color: white;
+                        padding:7px 20px;
+                        display: block;
+                        background-color: #4c74d8;
+                        float:left;
+                        width:50px;
+                        font-weight: 500;">Modifier</a>
                         <form action="'.route('promotions.destroy',$promotion->id).'" method="POST">
                         <input type="hidden" name="_token" value="yb5AihWDKb7pZahkmAzVDUI5s5u0fCXfajDetPDe">
                         <input type="hidden" name="_method" value="DELETE">
-                        <input  type="submit" value="Delete" />
+                        <input  type="submit" value="Delete" style=" background-color: #ff0000; /* Green */
+                        border: none;
+                        color: white;
+                        padding: 7px 20px;
+                        text-align: center;
+                        font-weight: 500;
+                        text-decoration: none;
+                        display: inline-block;
+                        margin-left:3px;
+                        font-size: 16px;" />
                     </form>
 
                     </td>
